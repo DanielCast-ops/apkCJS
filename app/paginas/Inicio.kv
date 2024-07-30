@@ -1,17 +1,17 @@
-<inicio>:
-    name: 'inicio'
+<Inicio>:
+    name: 'Inicio'
     BoxLayout:
         orientation: 'vertical'
         MDToolbar:
-            title: "inicio"
+            title: "Inicio"
             left_action_items: [["menu", lambda x: app.on_menu_click()]]
         Widget:
         MDRaisedButton:
             text: "Ir a configuraciones"
             pos_hint: {"center_x": 0.5}
-            on_release: app.root.current = 'configuraciones'
+            on_release: app.root.current = 'Configuraciones'
         MDRaisedButton:
             text: "Ir a inventario"
             pos_hint: {"center_x": 0.5}
-            on_release: app.root.current = 'invenrario'
+            on_release: app.root.current = 'Invenrario'
 
