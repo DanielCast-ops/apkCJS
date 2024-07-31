@@ -2,16 +2,16 @@
     name: 'Inicio'
     BoxLayout:
         orientation: 'vertical'
-        MDToolbar:
+        MDTopAppBar:
             title: "Inicio"
             left_action_items: [["menu", lambda x: app.dar_clic_menu()]]
         Widget:
         MDRaisedButton:
             text: "Ir a configuraciones"
             pos_hint: {"center_x": 0.5}
-            on_release: app.cambio_pantalla('Configuracion')
+            on_release: app.cambiar_pantalla('Configuracion')
         MDRaisedButton:
             text: "Ir a inventario"
             pos_hint: {"center_x": 0.5}
-            on_release: app.cambio_pantalla('Inventario')
+            on_release: app.cambiar_pantalla('Inventario')
 
