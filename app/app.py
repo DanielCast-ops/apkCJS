@@ -23,17 +23,23 @@ class Inventario(Screen):
 #en este espacio se crea la aplicacion principal
 
 class MainApp(MDApp):
-    def build(self):
+    def construir(self):
         self.load_all_kv_files()
         return Builder.load_file('main.kv')
 
-    def load_all_kv_files(self):
+    def cargar_documentos(self):
         Builder.load_file('paginas/Inicio.kv')
         Builder.load_file('paginas/Configuracion.kv')
         Builder.load_file('paginas/Inventario.kv')
 
-    def on_menu_click(self):
+    def dar_clic_menu(self):
         print("al menu")
+
+#aqui creo una funcion para el cambio de pantalla
+
+    def cambiar_pantalla(self, nombre_pantalla):
+        self.root.current = nombre_pantalla
+
 
 #verificamos si se esta ejecutando como script principal
 

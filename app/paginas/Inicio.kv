@@ -4,14 +4,14 @@
         orientation: 'vertical'
         MDToolbar:
             title: "Inicio"
-            left_action_items: [["menu", lambda x: app.on_menu_click()]]
+            left_action_items: [["menu", lambda x: app.dar_clic_menu()]]
         Widget:
         MDRaisedButton:
             text: "Ir a configuraciones"
             pos_hint: {"center_x": 0.5}
-            on_release: app.root.current = 'Configuraciones'
+            on_release: app.cambio_pantalla('Configuracion')
         MDRaisedButton:
             text: "Ir a inventario"
             pos_hint: {"center_x": 0.5}
-            on_release: app.root.current = 'Invenrario'
+            on_release: app.cambio_pantalla('Inventario')
 
