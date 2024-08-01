@@ -1,17 +1,39 @@
 <Inicio>:
     name: 'Inicio'
+#barra con otro color verde
     BoxLayout:
         orientation: 'vertical'
         MDTopAppBar:
+            id: toolbar
             title: "Inicio"
             left_action_items: [["menu", lambda x: app.dar_clic_menu()]]
+            md_bg_color: 0.192, 0.412, 0.220, 1
+
+#incertamos la imagen del logo
         Widget:
+            size_hint_y: 0.2
+        Image:
+            source: 'Imagenes/Logo.png'
+            size_hint: (1, 0.7)
+            pos_hint: {"center_x": 0.5}
+
+        Widget:
+            size_hint_y: 0.1
+
         MDRaisedButton:
             text: "Ir a configuraciones"
             pos_hint: {"center_x": 0.5}
+            md_bg_color: 0.192, 0.412, 0.220, 1
             on_release: app.cambiar_pantalla('Configuracion')
+       
+        Widget:
+            size_hint_y: 0.1
+
         MDRaisedButton:
             text: "Ir a inventario"
             pos_hint: {"center_x": 0.5}
+            md_bg_color: 0.192, 0.412, 0.220, 1
             on_release: app.cambiar_pantalla('Inventario')
-
+        
+        Widget:
+            size_hint_y: 0.2

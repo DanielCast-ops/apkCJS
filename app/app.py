@@ -7,6 +7,7 @@ from kivymd.uix.label import MDLabel
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.button import MDRaisedButton
 from kivymd.uix.toolbar import MDTopAppBar
+from kivymd.uix.menu import MDDropdownMenu
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 
@@ -36,8 +37,30 @@ class MainApp(MDApp):
     def cambiar_pantalla(self, nombre_pantalla):
         self.root.current = nombre_pantalla
 
+#se agrega una funcionalidad para el menu desplegable
+
+    def on_start(self):
+        menu_items = [
+            {
+                "text": f"{i}",
+                "viewclass": "OneLineListItem",
+                "on_release": lambda x=f"{i}": self.menu_callback(x),
+            } for i in ["Inicio", "Configuracion", "Inventario"]
+        ]
+        self.menu = MDDropdownMenu(
+            caller=self.root.get_screen('Inicio').ids.toolbar,
+            items=menu_items,
+            width_mult=4,
+            position="bottom"
+        )
+
+    def menu_callback(self, text_item):
+        self.menu.dismiss()
+        self.root.current = text_item
+
     def dar_clic_menu(self):
-        print("al menu")
+        self.menu.open()
+
 #verificamos si se esta ejecutando como script principal
 
 if __name__ == "__main__":
