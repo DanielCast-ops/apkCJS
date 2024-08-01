@@ -5,5 +5,13 @@
         MDTopAppBar:
             title: "Configuracion"
             left_action_items: [["arrow-left", lambda x: app.cambiar_pantalla('Inicio')]]
+            md_bg_color: 0.192, 0.412, 0.220, 1
+            
+        #incertamos la imagen 
         Widget:
+            size_hint_y: 0.1
+        Image:
+            source: 'Imagenes/Configuracion.png'
+            size_hint: (1, 0.7)
+            pos_hint: {"center_x": 0.5}
 
