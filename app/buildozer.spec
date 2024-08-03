@@ -1,22 +1,22 @@
 [app]
 
 # (str) Title of your application
-title = CJSapp
+title = cjs
 
 # (str) Package name
 package.name = cjs
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.cjs
+package.domain = org.test
 
 # (str) Source code where the main.py live
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,kv
+source.include_exts = py,png,jpg,kv,atlas
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = main.kv, paginas/Inicio.kv, paginas/Configuracion.kv, paginas/Inventario.kv, Imagenes/Logo.png, Imagenes/Configuracion.png, Imagenes/Inventario.png
+#source.include_patterns = main.kv,paginas/*.kv,Imagenes/*.png
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
